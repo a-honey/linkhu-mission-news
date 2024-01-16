@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dedede;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: white;
+}
+
+/* 고정 */
+
+header {
+  height: 92px;
+  background-color: #466aea;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+header > header {
+  font-size: 35px;
+  font-weight: 700;
+  position: relative;
+}
+
+header > header > span {
+  position: absolute;
+  right: -60px;
+  bottom: 30px;
+  font-size: 20px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 0;
+}
+
+nav > ul > li {
+  font-size: 20px;
+  padding: 0;
+  list-style: none;
+  color: black;
+}
+
+nav > ul > li {
+  position: relative;
+}
+
+.active::after {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  left: 10px;
+  height: 7px;
+  content: "";
+  background-color: #466aea;
+}
+
+nav > div.active {
+  color: blue;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 40px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card > img {
+  width: 400px;
+  height: 205px;
+  border-radius: 20px;
+}
+
+.content > p {
+  color: #5e5e5e;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.content > div {
+  display: flex;
+  color: #bebebe;
+  gap: 5px;
+}

@@ -1,4 +1,4 @@
-import tabName from "../assets/tabName";
+import tabName from "../assets/tagName";
 require("dotenv").config();
 
 class Navigation {
@@ -29,9 +29,7 @@ class Navigation {
     if (selectedTab.en === "all") {
       apiURL = `https://newsapi.org/v2/top-headlines?country=kr&apiKey=${process.env.API_KEY}`;
     } else {
-      apiURL = `https://newsapi.org/v2/top-headlines?country=kr&category=${
-        tabName.find((tab) => tab.ko === tabText).en
-      }&apiKey=${process.env.API_KEY}`;
+      apiURL = `https://newsapi.org/v2/top-headlines?country=kr&category=${selectedTab.en}&apiKey=${process.env.API_KEY}`;
     }
     return fetch(apiURL)
       .then((response) => response.json())

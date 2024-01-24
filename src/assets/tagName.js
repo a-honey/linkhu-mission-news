@@ -1,4 +1,4 @@
-const List = [
+const TAP_NAME = [
   {
     ko: "전체보기",
     en: "all",
@@ -29,4 +29,4 @@ const List = [
   },
 ];
 
-export default List;
+export default TAP_NAME;
